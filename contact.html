@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Responsive Contact Form</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300' rel='stylesheet' type='text/css'>
+
+<link href="https://fonts.googleapis.com/css?family=Raleway:100,400,700" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Oswald:200,400,700" rel="stylesheet">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+<script src="https://use.fontawesome.com/20ab91acc4.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1"><link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'><link rel="stylesheet" href="css/contact.css">
+
+</head>
+<body>
+
+  <header>
+    <div class="nav-bar">
+        <a href="index.html" class="Logo"><img src="img/logo.png"  alt=""  style="width: 6em; margin-top: 0.5em;"></a>
+        <div class="navigation">
+            <div class="nav-items">
+              <a href="#" style="margin-left: 190px;"><i class="uil uil-times nav-close-btn"></i></a>
+                
+                <a href="index.html"><i class="uil uil-home"></i>Home</a>
+                <a href="site1.html"><i class="uil uil-trees"></i>Carbon Footprint</i></a>
+                <a href="animalcard_glassmorphism.html"><i class="uil uil-pagelines"></i>Animal Database</a>
+                <a href="indiamap_3.html"><i class="uil uil-envelope"></i>Map 2</a>
+                <a href="map.html"><i class="uil uil-pagelines"></i>Animal Map</a>
+                <a href="team.html"><i class="uil uil-info-circle"></i>Our Team</a>
+                <a href="contact.html"><i class="uil uil-envelope"></i>Contact Us</a>
+            </div>
+        </div>
+        <i style="color: white; margin-top: 30px; margin-right: 25px;" class="uil uil-apps nav-menu-btn"></i>
+    </div>
+</header>
+
+
+
+<!-- 
+    =======================================================================
+
+    This is a working contact form. To receive email, 
+    Replace YOUR_ACCESS_KEY_HERE with your actual Access Key.
+
+    Create Access Key here 👉 https://web3forms.com/
+
+     =======================================================================
+ -->
+ <div class="heading">
+  <h1>Contact Us</h1>
+ </div>
+
+ <div class="wrapper-form">
+
+ 
+  <div class="flex items-center min-h-screen bg-gray-100 dark:bg-gray-900">
+    <div class="container mx-auto">
+      <div class="max-w-md mx-auto my-10 bg-white p-5 rounded-md shadow-sm">
+        <div class="text-center">
+          <h1 class="my-3 text-3xl font-semibold text-black dark:text-gray-200">
+            <!-- Contact Us -->
+          </h1>
+          <p class="text-gray-600 dark:text-gray-400">
+            <!-- Fill up the form below to send us a message. -->
+          </p>
+        </div>
+        <div class="m-7">
+          <form action="https://api.web3forms.com/submit" method="POST" id="form">
+            <input type="hidden" name="access_key" value="32f0f943-1257-40d1-a9a1-b3331e7a1222" />
+            <input type="hidden" name="subject" value="New Submission from Web3Forms" />
+            <input type="hidden" name="redirect" value="https://web3forms.com/success" />
+            <input type="checkbox" name="botcheck" id="" style="display: none;" />
+            <div class="mb-6">
+              <label for="name" class="block mb-2 font-medium text-sm text-black-600 dark:text-gray-400">Full Name</label>
+              <input type="text" name="name" id="name" placeholder="    Your Name" required class="w-full px-3 py-2 placeholder-gray-300 border border-gray-400 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-500 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
+            </div>
+            <div class="mb-6">
+              <label for="email" class="block mb-2 font-medium text-sm text-black-600 dark:text-gray-400">Email Address</label>
+              <input type="email" name="email" id="email" placeholder="    you@gmail.com" required class="w-full px-3 py-2 placeholder-gray-300 border border-gray-400 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-500 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
+            </div>
+            <div class="mb-6">
+              <label for="phone" class="text-sm mb-2 font-medium text-black-600 dark:text-gray-400">Phone Number</label>
+              <input type="text" name="phone" id="phone" placeholder="    Mobile Number" required class="w-full px-3 py-2 placeholder-gray-300 border border-gray-400 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-500 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
+            </div>
+            <div class="mb-6">
+              <label for="message" class="block mb-2 font-medium text-sm text-black-600 dark:text-gray-400 message">Your Message</label>
+  
+              <textarea rows="5" name="message" id="message" placeholder="    Your Message" class="w-full px-3 py-2 placeholder-gray-300 border border-gray-400 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-500 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" required></textarea>
+            </div>
+
+            <!-- <input type="hidden" name="recaptcha_response" id="recaptchaResponse"> -->
+            <div class="mb-6">
+              <button type="submit" class="w-full px-3 py-4 text-white bg-indigo-700 rounded-md focus:bg-indigo-600 focus:outline-none">
+                Send Message
+              </button>
+            </div>
+            <p class="text-base text-center text-white-400" id="result"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+ </div>
+
+ 
+
+
+<!-- partial:index.partial.html -->
+<!-- <section id="contact">
+  
+  <h1 class="section-header">Contact Us</h1>
+  
+  <div class="contact-wrapper"> -->
+  
+  <!-- Left contact page -->
+  
+  <!-- 
+    =======================================================================
+
+    This is a working contact form. To receive email, 
+    Replace YOUR_ACCESS_KEY_HERE with your actual Access Key.
+
+    Create Access Key here 👉 https://web3forms.com/
+
+    =======================================================================
+ -->
+
+<!-- <div class="flex items-center min-h-screen bg-gray-900">
+  <div class="container mx-auto">
+    <div class="max-w-md mx-auto my-10 bg-gray-800 p-5 rounded-md shadow-sm">
+      <div class="text-center">
+        <h1 class="my-3 text-3xl font-semibold text-gray-100">
+          Contact Us
+        </h1>
+        <p class="text-gray-400 dark:text-gray-400">
+          Fill up the form below to send us a message.
+        </p>
+      </div> -->
+      <!-- <div class="m-7">
+        <form action="https://api.web3forms.com/submit" method="POST" id="form">
+          <input type="hidden" name="access_key" value="32f0f943-1257-40d1-a9a1-b3331e7a1222" />
+          <input type="hidden" name="subject" value="New Submission from Web3Forms" />
+          <input type="checkbox" name="botcheck" id="" style="display: none;" />
+
+          <div class="mb-6" class="form-group">
+            <label for="name"  class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name"  >Full Name</label>
+            <input type="text" name="name" id="name" placeholder="Your Name" required class="w-full px-3 py-2 h-12 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none" />
+          </div>
+          <div class="mb-6"class="form-group">
+            <label for="email" class="block mb-2 text-sm text-gray-400" >Email Address</label>
+            <input type="email" name="email" id="email" placeholder="your@gmail.com" required class="w-full px-3 py-2 h-12 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none" />
+          </div> -->
+          <!-- <div class="mb-6">
+            <label for="phone" class="block mb-2 text-sm text-gray-400">Phone Number</label>
+            <input type="text" name="phone" id="phone" placeholder="+1 (555) 1234-567" required class="w-full px-3 py-2 h-12 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none" />
+          </div> -->
+          <!-- <div class="mb-6">
+            <label for="message" class="block mb-2 text-sm text-gray-400">Your Message</label>
+
+            <textarea rows="5" name="message" id="message" placeholder="Your Message" class="w-full px-3 py-2 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none" required></textarea>
+          </div>
+          <div class="mb-6">
+            <button type="submit" class="w-full bg-indigo-600 inline-block text-white no-underline hover:text-indigo-100 py-4 px-4 rounded-sm focus:outline-none">
+              Send Message
+            </button>
+          </div>
+          <p class="text-base text-center text-gray-400" id="result"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</div> -->
+    
+    <!-- <form id="contact-form" class="form-horizontal" role="form" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="32f0f943-1257-40d1-a9a1-b3331e7a1222">
+       
+      <div class="form-group">
+        <div class="col-sm-12">
+          <input type="text" class="form-control" id="name" placeholder="NAME" name="name" value="" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-12">
+          <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value="" required>
+        </div>
+      </div>
+
+      <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message" required></textarea>
+
+      <div class="h-captcha" data-captcha="true" style="margin-top: 20px;"></div>
+      
+      <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
+        <div class="alt-send-button">
+          <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
+        </div>
+      
+      </button>
+      
+    </form> -->
+
+    <!-- contact form -->
+
+    <!-- <form action="https://api.web3forms.com/submit" method="POST">
+
+      <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE"> -->
+  
+      <!-- <input type="text" name="name" required> -->
+      <!-- <input type="email" name="email" required> -->
+      <!-- <textarea name="message" required></textarea> -->
+      <!-- <div class="h-captcha" data-captcha="true"></div> -->
+      <!-- <button type="submit">Submit Form</button> -->
+  
+  <!-- </form> -->
+    
+  <!-- Left contact page --> 
+    
+      <!-- <div class="direct-contact-container">
+
+        <ul class="contact-list">
+          <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">Pune, Maharashtra</span></i></li>
+          
+          <li class="list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone"><a href="tel:1-212-555-5555" title="Give me a call">(+91) 8484987616</a></span></i></li>
+          
+          <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a href="mailto:#" title="Send me an email">gbwaghmare66@gmail.com</a></span></i></li>
+          
+        </ul>
+
+        <hr>
+        <ul class="social-media-list">
+          <li><a href="#" target="_blank" class="contact-icon">
+            <i class="fa fa-github" aria-hidden="true"></i></a>
+          </li> -->
+          <!-- <li><a href="#" target="_blank" class="contact-icon">
+            <i class="fa fa-codepen" aria-hidden="true"></i></a>
+          </li> -->
+          <!-- <li><a href="#" target="_blank" class="contact-icon">
+            <i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+          </li>
+          <li><a href="#" target="_blank" class="contact-icon">
+            <i class="fa fa-linkedin" aria-hidden="true"></i></a>
+          </li>       
+        </ul>
+        <hr>
+
+        <div class="copyright">&copy; ALL OF THE RIGHTS RESERVED</div>
+
+      </div> -->
+    
+  <!-- </div>
+  
+</section> -->
+<!-- partial -->
+<!-- <script src="https://web3forms.com/client/script.js" async defer></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script><script  src="js/contact.js"></script> -->
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Carbon Footprint Calculator</title>
+    <link rel="stylesheet" href="css/site1.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="index.html"><img src="img/carbon-footprint-logo.png" alt="Logo"></a>
+        </div>
+        
+        <div class="icons">
+            <a href="site2.html"><ion-icon name="calculator-outline" class="icon" aria-label="Calculator"></ion-icon></a>
+            <span class="icon"><ion-icon name="contrast-outline" aria-label="Dark Mode" onclick="toggleDarkMode()"></ion-icon></span>
+            <span class="icon"><ion-icon name="download-outline" aria-label="Save Result" onclick="window.print();return false"></ion-icon></span>
+            <span class="icon"><ion-icon name="information-circle-outline" aria-label="Info"></ion-icon></span>
+        </div>
+    </header>
+    <section class="introduction">
+        <h1>What is Carbon Footprint ?</h1>
+        <p>
+            <h2>Ecological Footprint</h2>
+            The amount of land and water needed to produces resources for mankind <br>
+            and absorb the waste produced.
+            <br><br>
+            <h2>Carbon Footprint</h2>
+            The amount of CO<sub>2</sub> released into the atmosphere due to human activity. <br>
+            Considered to be a part of the Ecological Footprint.
+        </p>
+        <!-- Click on the <a href="#choice1">cards below</a> to select and calculate your carbon footprint. -->
+        <button onClick="parent.location='#choice1'" class="read-btn">Calculate your carbon footprint&emsp;<ion-icon name="arrow-forward-outline"></ion-icon></button>
+    </section>
+    <section class="choice-card">
+            <h1>Carbon Footprint Calculator</h1>
+            <div class="cards">
+                <div class="card" onclick="window.location.href=`site2.html`" id="choice1">
+                    <h2>Individual Footprint</h2>
+                    <p>
+                        Calculate your own carbon footprint. <br>
+                        Or know the carbon footprint <br>
+                        of your family. <br>
+                        Valid upto 16 members.
+                    </p>
+                </div>
+                <div class="card" onclick="window.location.href=`site2.html`">
+                    <h2>Small Business Footprint</h2>
+                    <p>
+                        Calculate the carbon footprint of a small business <br>
+                        Valid upto 250 employees.
+                    </p>
+                </div>
+            </div>
+    </section>
+    <script src="js/site.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

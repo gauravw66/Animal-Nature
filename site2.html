@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Carbon Footprint Calculator</title>
+    <link rel="stylesheet" href="css/site1.css">
+    <link rel="stylesheet" href="css/site2.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="index.html"><img src="img/carbon-footprint-logo.png" alt="Logo"></a>
+        </div>
+        
+        <div class="icons">
+            <span class="icon"><ion-icon name="contrast-outline" aria-label="Dark Mode" onclick="toggleDarkMode()"></ion-icon></span>
+            <span class="icon"><ion-icon name="download-outline" aria-label="Save Result" onclick="window.print();return false"></ion-icon></span>
+            <a href="http://www.carbonfootprint.com/carbonoffset.html" target="_blank" rel="noopener noreferrer"><span class="icon"><ion-icon name="information-circle-outline" aria-label="Info"></ion-icon></span></a>
+            <span class="icon"><ion-icon name="arrow-back-outline" aria-label="Back" onclick="window.history.back()"></ion-icon></span>
+        </div>
+    </header>
+    
+    <section>
+        <div class="calculator">
+            <div class="cards">
+                <!-- <div class="card" id="country">
+                    <h2>Nationality</h2>
+                        Default location is India for now
+                        Input fields related to nationality
+                    <p>
+                        Enter the country you are currently residing in. <br>
+                        This helps us to calculate the cost of your basic commodities and their impact more accurately.
+                    </p>
+                    <button onclick="userLocation()">Get Current Location</button>
+                </div> -->
+                <div class="card" id="transport">
+                    <h2>Members of HouseHold</h2>
+                    Your individual footprint is calculated
+                    by dividing the amount of total energy
+                    used in the house by the number of people
+                    in your household.
+                    <br> <br>
+                    <b>
+                        Total Members in your household &nbsp;<input type="number" id="members" value="1" max="16" min="1"> 
+                    </b>
+                </div>
+    
+                <div class="card row-span-2" id="energy">
+                    <h2>Energy Use</h2>
+                    <h3>Please enter according to your monthly usage</h3>
+                    <br>
+                    <ul type="disc">
+                        <li><h3>Electricity</h3></li>
+                        <input type="number" id="electricity" value = 0> kWh at a factor of 
+                        <input type="number" id="elec-factor" value="0.7132" 
+                        title="Predetermined factor prevalent in India (Change if your tariff varies)"> kgCO<sub>2</sub>e/kWh
+                        <br><br>
+                        <li><h3>Natural Gas</h3></li>
+                        <input type="number" id="natural-gas" value = 0> cubic meter(s)
+                        <br><br>
+                        <li><h3>Heating Oil</h3></li>
+                        <input type="number" id="heating-oil" value = 0> Litres
+                        <br><br>
+                        <li><h3>Coal</h3></li>
+                        <input type="number" id="coal" value = 0> Litres
+                        <br><br>
+                        <li><h3>LPG</h3></li>
+                        <input type="number" id="lpg" value = 0> Litres
+                        <br><br>
+                        <li><h3>Kerosene</h3></li>
+                        <input type="number" id="kerosene" value = 0> Litres
+                        <br><br>
+                        <li><h3>Wood</h3></li>
+                        <input type="number" id="wood" value = 0> Kg(s)
+                    </ul>
+                </div>
+    
+                <div class="card" id="flights">
+                    <h2>Flights</h2>
+                    Return Trip <input type="radio" id="return-trip" name="trip" value="2"> &nbsp; One Way Trip <input type="radio" id="single-trip" name="trip" value="1">
+                    <br><br>
+                    <h3>Length of Flight</h3>
+                    <br>
+                    <input type="radio" name="flight-type" id="#domestic" value="domestic"> Domestic Flight <br><br>
+                    <input type="radio" name="flight-type" id="#international" value="international"> International Flight <br><br>
+                    <h3>Number of trips &nbsp; <input type="number" id="flight-number" value="0"></h3>(annually)
+                </div>
+    
+                <div class="card" id="priv-transport">
+                    <h2>Private Transport</h2>
+                    <h3>Car/Jeep Mileage &emsp;&emsp;<input type="number" id="mileage4" value = 0> Km</h3>
+                    <h3>Vehicle Fuel Type</h3>
+                    Electric <input type="radio" name="fuel4" id="electric4" value="1">&emsp;Conventional <input type="radio" name="fuel4" id="oil4" value="0">
+                    <br>
+                    <br>
+                    <h3>Bike/Scooter Mileage <input type="number" id="mileage2" value = 0> Km</h3>
+                    Electric <input type="radio" name="fuel2" id="electric2" value="1">&emsp;Conventional <input type="radio" name="fuel2" id="oil2" value="0">
+                    <br>
+                    <br>
+                    <h4>I use renewable sources of energy to charge my EVs <input type="checkbox" name="fuel" id="realEV"></h4>
+                    <br>
+                    <h3>Bharat Stage Norms <select list="value" id="bsNorms"></h3>
+                    <option value="None">--Select--</option>
+                    <option value="3">BS-III</option>
+                    <option value="4">BS-IV</option>
+                    <option value="5">BS-V</option>
+                    <option value="6">BS-VI</option>
+                    </select>
+                    <br><br>
+                    <h3>Enter Distance travelled in a month</h3>
+                    <b>Two Wheeler &nbsp;<input type="number" id="wheel2" value = 0> Km<br>
+                        Four Wheeler <input type="number" id="wheel4" value = 0> Km</b>
+                </div>
+    
+                <div class="card" id="pub-transport">
+                    <h2>Public Transport</h2>
+                    Enter the distance travelled in a month if travelled in the following means of public transport.
+                    <div style="display: flex; flex-wrap: wrap;">
+                        <div style="margin: 1rem;">
+                            <h3>Bus        <br><input type="number"id="bus" value = 0> Km</h3> <br>
+                            <h3>Railway    <br><input type="number"id="rail" value = 0> Km</h3><br>
+                            <h3>Metro/Tram <br><input type="number"id="metro" value = 0> Km</h3><br>
+                            </div>
+                            <div style="margin: 1rem;">
+                            <h3>Taxi       <br><input type="number"id="taxi" value = 0> Km</h3><br>
+                            <h3>Auto       <br><input type="number"id="auto" value = 0> Km</h3>
+                            </div>
+                    </div>
+                </div>
+                
+
+    
+                <div class="card" id="result">
+                    <h2>Your Carbon Footprint</h2>
+                    <p id="carbonResult">Calculate to see your footprint</p>
+                    <button onclick="calculateFootprint()" style=" border:solid transparent; border-radius: 5px; height: 2vw; width: 5vw; background-color: #ffffff56; backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px);">Calculate</button>
+                </div>
+            </div>
+        </div>
+        <div id="loadingScreen" class="loading">
+            <div class="loader"></div>
+            <p>Loading...</p>
+        </div>
+
+    
+        <script src="js/site.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </section>
+</body>
+</html>
+
+
+<!-- Referrences
+https://www.irade.org/egy_2307-with-corrections.pdf
+https://wgbis.ces.iisc.ac.in/energy/paper/GHG_footprint/methods.html
+https://www.americangeosciences.org/critical-issues/faq/how-much-carbon-dioxide-produced-when-different-fuels-are-burned
+https://en.wikipedia.org/wiki/Natural_gas
+https://mngl.in/storage/51147/Maharashtra-Natural-Gas-Limited-AR-2022-23_V1.pdf
+https://www.carbonindependent.org/15.html#:~:text=Heating%20oil,per%20kWh)%20%5B8%5D.
+-->

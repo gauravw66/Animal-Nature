@@ -1,0 +1,495 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+:root{
+    --white-color:#fff;
+    --dark-color:#222;
+    --body-bg-color:#fff;
+    --section-bg-color:#202834;
+    --navigation-item-hover-color:#3b5378;
+
+    --text-shadow:0 5px 25px rgba(0,0,0,0.1);
+    --box-shadow:0 5px 25px rgb(0 0 0 / 20%);
+
+    --scroll-bar-color:#fff;
+    --scroll-thumb-color:#282f4e;
+    --scroll-thumb-hover-color: #454f6b;
+
+}
+
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: var(--body-bg-color);
+} */
+
+header{
+    z-index: 9999;
+    position: fixed;
+    width: 100%;
+    height: calc(5rem + 1rem);
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+}
+
+header .nav-bar{
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 200px;
+    transition: 0.3s ease;
+}
+
+.nav-close-btn, .nav-menu-btn{
+    display: none;
+}
+
+.nav-bar .Logo{
+    color: var(--white-color);
+    font-size: 1.8em;
+    font-weight: 600;
+    letter-spacing: 2px;
+    /* width: 5px; */
+    text-transform: uppercase;
+    text-decoration: none;
+    text-shadow: var(--text-shadow);
+}
+
+.navigation .nav-items{
+    margin-left: -350px;
+}
+
+.navigation .nav-items a{
+    color: var(--white-color);
+    font-size: 1em;
+    text-decoration: none;
+    /* text-shadow: var(--text-shadow); */
+    text-shadow: 0 0 4px black;    
+}
+
+.navigation .nav-items a:hover{
+    color: greenyellow;
+    transition: 0.3s ease-in-out;
+}
+
+.navigation .nav-items a i{
+    display: none;
+}
+
+.navigation .nav-items a:not(:last-child){
+    margin-right: 45px;
+}
+
+body{
+    background-color: rgb(50,50,68);
+    min-height: 100%;
+    min-width: 100%;
+    overflow: auto;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+
+#name{
+    position: absolute;
+    background-color: white;
+    width: fit-content;
+    opacity: 0;
+    border-radius: 5px;
+    border: 3px solid pink;
+    padding: 5px;
+    font-size: 1.5rem;
+}
+
+#animal_name{
+  position: absolute;
+  background-color: white;
+  width: fit-content;
+  opacity: 0;
+  border-radius: 5px;
+  border: 3px solid blue;
+  padding: 5px;
+  font-size: 1.5rem;
+}
+
+svg path{
+    cursor: pointer;
+    z-index: 150;
+    /* margin-left: 500px; */
+}
+ img{
+    opacity: 0;
+    z-index: -5;
+    position: absolute;
+    /* margin-left: 500px; */
+ }
+
+ #bengal_tiger{
+  translate: 80px 540px;
+  left: 500px;
+  top: -350px;
+}
+
+  #asiatic_lion{
+    translate: 150px 530px;
+    left: 100px;
+    top: -100px;
+ }
+
+ #great_indian_bustard{
+    width: 350px;
+    height: 200px;
+    left: 250px;
+    top: 100px;
+ }
+
+ #markhor{
+    width: 400px;
+    height: 250px;
+    left: 400px;
+    top: 0px;
+ }
+
+ #snow_leopard{
+    width: 350px;
+    height: 170px;
+    left: 300px;
+    top: 0;
+ }
+
+ #caracal{
+    width: 300px;
+    height: 170px;
+    left: 100px;
+    top: 20px;
+    translate: 0 0px;
+ }
+
+ #musk_deer{
+   width: 260px;
+   height: 150px;
+   left: 420px;
+   top: 100px;
+ }
+
+ #o_w_b_vulture{
+   width: 280px;
+   height: 350px;
+   left: 370px;
+ }
+
+ #barasingha{
+   width: 350px;
+   height: 400px;
+   left: 150px;
+ }
+
+ #one_horned_rhinoceros{
+   width: 390px;
+   height: 270px;
+   left: 450px;
+   top: 100px;
+ }
+
+ #black_buck{
+   width: 300px;
+   height: 175px;
+   left: 600px;
+   top: 200px;
+ }
+
+ #indian_python{
+   width: 300px;
+   height: 150px;
+   left: 600px;
+   top: 300px;
+ }
+
+ #red_panda{
+   width: 325px;
+   height: 275px;
+   left: 550px;
+   top: 50px;
+ }
+
+ #wild_buffalo{
+   width: 325px;
+   height: 215px;
+   left: 350px;
+   top: 250px;
+ }
+
+ #hawksbill_turtle{
+   width: 310px;
+   height: 210px;
+   left: 550px;
+   top: 350px;
+ }
+
+ #smooth_coated_otter{
+  width: 300px;
+  height: 200px;
+  left: 150px;
+  top: 350px;
+ }
+
+ #slender_loris{
+  width: 250px;
+  height: 175px;
+  left: 550px;
+  top: 500px;
+ }
+
+ #indian_pangolin{
+  width: 275px;
+  height: 150px;
+  left: 370px;
+  top: 450px;
+ }
+
+ #lion_tailed_macaque{
+  width: 275px;
+  height: 150px;
+  left: 0px;
+  top: 600px;
+ }
+
+ #dhole{
+  width: 325px;
+  height: 200px;
+  left: 350px;
+  top: 600px;
+ }
+
+ #malabar_large_spotted_civet{
+  width: 300px;
+  height: 175px;
+  left: 100px;
+  top: 750px;
+ }
+
+ #nilgiri_tahr{
+  width: 300px;
+  height: 200px;
+  left: 0;
+  top: 670px;
+ }
+
+ #indian_skimmer{
+  width: 300px;
+  height: 200px;
+  left: 250px;
+  top: 100px;
+ }
+
+ #slow_loris{
+  width: 250px;
+  height: 175px;
+  left: 750px;
+  top: 100px;
+ }
+
+ #assam_roofed_turtle{
+  left: 650px;
+  top: 100px;
+ }
+
+ #hoolock_gabbon{
+  width: 300px;
+  height: 200px;
+  left: 650px;
+  top: 70px;
+ }
+
+ #clouded_leopard{
+  left: 700px;
+  top: 200px;
+ }
+
+ #monitor_lizard{
+  width: 300px;
+  height: 175px;
+  left: 630px;
+  top: 100px;
+ }
+
+ #himalayan_yellow_throated_marten{
+  left: 800px;
+  top: 200px;
+ }
+
+ #indian_bison{
+  left: 750px;
+  top: 200px;
+ }
+
+ #red_headed_vulture{
+  width: 300px;
+  height: 200px;
+  left: 50px;
+  top: 50px;
+ }
+
+#striped_hyena{
+  width: 275px;
+  height: 185px;
+  left: 250px;
+  top: 400px;
+}
+
+#white_rumped_vulture{
+  width: 250px;
+  height: 300px;
+  left: 150px;
+  top: 300px;
+}
+#pondicherry_shark{
+  width: 300px;
+  height: 200px;
+  left: 10px;
+  top: 700px;
+}
+
+#andaman_shrew{
+  width: 250px;
+  height: 175px;
+  left: 900px;
+  top: 900px;
+}
+
+#himalayan_wolf{
+  width: 300px;
+  height: 175px;
+  left: 450px;
+}
+
+@media  screen and (max-width: 1100px) {
+  header .nav-bar{
+      padding: 0 50px;
+  }
+
+  .swiper-slide .text-content{
+      margin: 0 120px 0 50px;
+  }
+
+  .bg-slider-thumbs{
+      bottom: 3em;
+  }
+}
+
+@media  screen and (max-width: 785px){
+  header .nav-bar{
+      padding: 25px 20px;
+  }
+
+  .swiper-slide .text-content {
+      margin: -80px 70px 0 20px;
+  }
+
+  .swiper-slide .text-content .title{
+      font-size: 3em;
+  }
+
+  .swiper-slide .text-content .title span{
+      font-size: 0.35em;
+  }
+
+  .swiper-slide .text-content p{
+      font-size: 0.9em;
+  }
+
+  .nav-menu-btn{
+      display: block;
+      color: var(--dark-color);
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-size: 1.3em;
+      margin: 10px;
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+  }
+
+  .navigation{
+      z-index: 99999;
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      /* margin-top: 50px; */
+      top: 0;
+      left: 0;
+      background: rgba(0,0,0,0.25);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      visibility: hidden;
+      opacity: 0;
+      transition: 0.3s ease-in-out;
+  }
+
+  .navigation.active{
+      visibility: visible;
+      opacity: 1;
+  }
+
+  .navigation .nav-items{
+      position: relative;
+      /* background: var(--white-color); */
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(5px);
+      text-shadow: 0 0 4px black;
+      /* padding: 20px; */
+      border-radius: 10px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      border-right: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: var(--box-shadow);
+      width: 400px;
+      max-width: 400px;
+      display: grid;
+      place-content: center;
+      margin: 20px;
+      margin-top: 360px;
+      padding: 5px;
+      border-radius: 20px;
+      box-shadow: var(--box-shadow);
+      transform: translateY(-200px); 
+      transition: 0.3s ease-in-out;
+  }
+
+  .navigation .nav-items a{
+      color: white;
+      font-size: 1em;
+      margin: 15px 50px;
+      transition: 0.3s ease-in-out;
+      text-shadow: none;
+  }
+
+  .navigation.active .nav-items{
+      transform: translateY(-50%);
+      transition: 0.3s ease-in-out;
+  }
+
+  .navigation .nav-items a i{
+      display: inline-block;
+      font-size: 1.3em;
+      margin-right: 5px;
+  }
+
+  .swiper-slide .text-content .read-btn {
+      margin-top: 20px;
+  }
+}

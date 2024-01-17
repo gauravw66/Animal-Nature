@@ -1,0 +1,183 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(50,50,68);
+    min-height: 100%;
+    min-width: 100%;
+    overflow: auto;
+    
+}
+
+
+#name{
+    position: absolute;
+    background-color: white;
+    width: fit-content;
+    opacity: 0;
+    border-radius: 5px;
+    border: 3px solid pink;
+    padding: 5px;
+    font-size: 1.5rem;
+}
+
+#animal_name{
+    position: absolute;
+    background-color: white;
+    width: fit-content;
+    opacity: 0;
+    border-radius: 5px;
+    border: 3px solid blue;
+    padding: 5px;
+    font-size: 1.5rem;
+  }
+
+  svg path{
+    cursor: pointer;
+    z-index: 150;
+}
+
+img{
+    opacity: 0;
+    z-index: -5;
+    position: absolute;
+}
+
+#kashmir_red_stag{
+    width: 250px;
+    left: 1250px;
+    top: 75px;
+}
+
+#red_wolf{
+    width: 275px;
+    top: 155px;
+    left: 15px;
+}
+
+#wolverine{
+    width: 250px;
+    left: 15px;
+}
+
+#mexican_grey_wolf{
+    width: 260px;
+    left: 50px;
+    top: 250px;
+}
+
+#andean_condor{
+    width: 300px;
+    left: 150px;
+    top: 450px;
+}
+
+#jaguar{
+    width: 260px;
+    left: 330px;
+    top: 550px;
+}
+
+#darwins_fox{
+    width: 300px;
+    left: 250px;
+    top: 550px;
+}
+
+#spider_monkey{
+    width: 270px;
+    left: 190px;
+    top: 410px;
+}
+
+#green_sea_turtle{
+    width: 270px;
+    left: 250px;
+    top: 370px;
+}
+
+#hawksbill_turtle{
+    width: 270px;
+    left: 260px;
+    top: 370px;
+}
+
+#giant_armadilo{
+    width: 250px;
+    left: 270px;
+    top: 400px;
+}
+
+#marsh_deer{
+    width: 300px;
+    left: 750px;
+    top: 350px;
+}
+
+#forsters_tree_iguana{
+    width: 270px;
+    left: 270px;
+    top: 430px;
+}
+
+#giant_otter{
+    width: 270px;
+    left: 300px;
+    top: 470px;
+}
+
+#greenland_shark{
+    width: 300px;
+    left: 370px;
+    top: 25px;
+}
+
+#beluga{
+    width: 300px;
+    left: 530px;
+    top: 15px;
+}
+
+#leatherback_sea_turtle{
+    width: 270px;
+    left: 1300px;
+    top: 330px;
+}
+
+#kakapo{
+    width: 270px;
+    left: 1600px;
+    top: 500px;
+}
+
+#javan_rhino{
+    width: 270px;
+    left: 1270px;
+    top: 430px;
+}
+
+#cantors_giant_softshell_turtle{
+    width: 270px;
+    left: 1370px;
+    top: 530px;
+}
+
+#philippine_eagle{
+    width: 320px;
+    left: 1230px;
+    top: 550px;
+}
+
+#malaysia_tiger{
+    width: 270px;
+    left: 1320px;
+    top: 430px;
+}
+
+#golden_snub_nose_monkey{
+    width: 275px;
+    left: 1300px;
+    top: 50px;
+}
